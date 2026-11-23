@@ -12,11 +12,11 @@ El circuito se ha montado sobre una protoboard conectando distintos componentes 
 
 La pantalla LCD se comunica en modo paralelo de 4 bits. El joystick permite navegar por los menús y seleccionar opciones, mientras que el pulsador externo controla la cancelación y el acceso al modo administrador.
 
-**Fotos del montaje: **
-
-
-
-** Esquemático: **
+**Fotos y video del montaje y funcionamiento:**
+https://drive.google.com/file/d/1QSb7cOhqzrf-FJ_6IS0i7YBgZv1glA9p
+https://drive.google.com/file/d/1gv5pXurw2MJXHAG9PdTACz7frYQnF6rJ
+https://drive.google.com/file/d/1jejfJe7J6mLaT209K0LH6u18AtNWp0-i
+**Esquemático:**
 <img width="1726" height="1244" alt="fritzing" src="https://github.com/user-attachments/assets/fd685d61-9a2d-4d0c-be87-65a6e25d7cd8" />
 
 ### 3. Organización del software
