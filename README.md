@@ -14,8 +14,22 @@ La pantalla LCD se comunica en modo paralelo de 4 bits. El joystick permite nave
 
 ** Fotos del montaje: **
 
+
+
 ** Esquemático: **
-<img width="1726" height="1244" alt="fritzing(1)" src="https://github.com/user-attachments/assets/bda450bd-6f91-4ac8-b04c-5f9ff78dfa26" />
+<img width="1726" height="1244" alt="fritzing" src="https://github.com/user-attachments/assets/fd685d61-9a2d-4d0c-be87-65a6e25d7cd8" />
 
 ### 3. Organización del software
 La solución se bas aen una máquina de estados principal con tres modos de funcionamiento:
+#### ARRANQUE
+Al inciar el Arduino, la pantala muetsra CARGANDO... mientars el LED1 parpadea tres veces. Después el programa pasa automáticamente al modo Servicio.
+### SERVICIO
+Inicialmente, el sistema permanece esperando a que el sensor de ultrasonidos detecte un cliente a menos de 100cm.
+
+Cuando sae detecta un cliente, se muestra la temperatura y la humedad durante cinco segundos. Después se permite seleccionar una de las cinco bebidas utilizanod eljoystick.
+
+Tras confirmar la selección, se simula la preparación de loa bebida durante un tiempo pseudoaleatorio de entre cuatro y ocho segundos.
+
+Durante la preparación se utiliza PWM para aumentar progresivamente el brillo de LED2.
+
+Finalmente, la pantalla muestra REITRE BEBIDA durante tres segundos y el sistema regresa al estado de espera.
