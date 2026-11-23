@@ -12,7 +12,7 @@ El objetivo de esta practica es desarrollar el controlador de una maquina expend
 
 Para ello se ha utilizado una placa Arduino MEga 2560, una pantalla LCD 1602, un joystick analógico, un sensor DHT11, un sensor ultrasonidos HC-SR04, un pulsador externo y dos LEDs.
 
-EL programa está organizado mediante máquinas de estado para gestionar el funcionamiento de la máquina sin depender de esperas largas mediante delay().
+EL programa está organizado mediante máquinas de estado para gestionar el funcionamiento de la máquina sin depender de esperas largas mediante delay(). También se han utilizado tareas cooperativas con ArduinoThread, interrupciones hardware, control PWM y un Watchdog de seguridad.
 
 ### 2. Montaje del circuito
 El circuito se ha montado sobre una protoboard conectando distintos componentes al Arduino Mega 2560, como hemos comentado antes.
@@ -86,6 +86,15 @@ Durante la preparación de una bebida se utiliza analogWrite() para controlar el
 El HC-SR04 utiliza un pulso de disparo en TRIG y un pulso de respuesta en ECHO. La duración de este último permite calcular la distancia.
 
 Se utiliza pulseIn() con un tiempo de espera limitado a 8000 microsegundos. Esta operación sigue siendo bloqueante, aunque con un timepo máximo acotado.
+
+#### Threads: lectura periódica del DHT11
+Se ha utilizado la biblioteca ArduinoThread para gestionar periódicamente la lectura del sensor DHT11.
+
+Se ha configurado una tarea que se ejecuta cada 2000 milisegundos y obtiene los valores de temperatura y humedad, almacenándolos en variables globales.
+
+Los estados MOSTRAR_ENTORNO de Servicio y VER_TEMPERATURA de Administrador utilizan esos valores almacenados, evitando realizar nuevas lecturas directamente desde cada estado.
+
+Las tareas se ejecutan desde el bucle principal y no funcionan en paralelo como hilos independientes. Se ha utilizado para organizar las lecturas periódicas del sensor y separarlas de la lógica de visualización.
 
 ### 5.Conclusiones
 Esta práctica ha permitido integrar sensores y actuadores en unúnico sistema empotrado, organizando el comportamiento mediante máquinas de estados.
