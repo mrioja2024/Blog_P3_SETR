@@ -1,6 +1,6 @@
 
 
-https://github.com/user-attachments/assets/77678807-80b9-480b-ba7b-b14a922051b7
+
 
 
 
@@ -21,7 +21,7 @@ La pantalla LCD se comunica en modo paralelo de 4 bits. El joystick permite nave
 **Fotos y video del montaje y funcionamiento:**
 
 
-
+https://github.com/user-attachments/assets/77678807-80b9-480b-ba7b-b14a922051b7
 <img width="4284" height="5712" alt="IMG_4895" src="https://github.com/user-attachments/assets/1cf7e2c8-eb59-4abe-b008-45fe7363fe4b" />
 <img width="4284" height="5712" alt="IMG_4893" src="https://github.com/user-attachments/assets/151c8a58-bc7c-4674-a25b-296ca53b4cd9" />
 
