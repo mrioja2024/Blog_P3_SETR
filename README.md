@@ -12,7 +12,7 @@ El circuito se ha montado sobre una protoboard conectando distintos componentes 
 
 La pantalla LCD se comunica en modo paralelo de 4 bits. El joystick permite navegar por los menús y seleccionar opciones, mientras que el pulsador externo controla la cancelación y el acceso al modo administrador.
 
-** Fotos del montaje: **
+**Fotos del montaje: **
 
 
 
@@ -74,3 +74,8 @@ Durante la preparación de una bebida se utiliza analogWrite() para controlar el
 El HC-SR04 utiliza un pulso de disparo en TRIG y un pulso de respuesta en ECHO. La duración de este último permite calcular la distancia.
 
 Se utiliza pulseIn() con un tiempo de espera limitado a 8000 microsegundos. Esta operación sigue siendo bloqueante, aunque con un timepo máximo acotado.
+
+### 5.Conclusiones
+Esta práctica ha permitido integrar sensores y actuadores en unúnico sistema empotrado, organizando el comportamiento mediante máquinas de estados.
+
+Se han aplicado conceptos como interrupciones, temporización, PWM y Watchdog, además de gestionar la interacción con el usuario mediante una pantalla LCD y un joystick.
